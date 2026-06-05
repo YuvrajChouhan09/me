@@ -338,8 +338,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Dynamic router handling external redirection URLs
     const warpCodes = {
-        "school": "https://your-school-portal-link.com",
-        "h4ke3q": "https://your-secret-destination.com"
+        "school": "https://yuvrajchouhan09.github.io/me/school.html",
+        "yuvraj": "https://yuvrajchouhan09.github.io/Yuvraj/"
     };
 
     // Text outputs responding directly onto console screens
@@ -347,7 +347,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "hello": "Console: Greet_Protocol initiated. Welcome back, agent.",
         "status": "Console: All server arrays running within optimal temperature parameters.",
         "clear": "SYSTEM_COMMAND_CLEAR",
-        "help": "SYSTEM: Available commands -> 'hello', 'status', 'school', 'h4ke3q', 'clear'."
+        "help": "SYSTEM: Available commands -> 'hello', 'status', 'school', 'clear'."
     };
 
     // Formatter engine drawing stream text loops dynamically into view track

@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NATURESEEKER // ECOSYSTEM</title>
+    
+    <!-- STYLESHEET AND CORE EXTERNAL ENGINE SCRIPTS -->
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+</head>
+
+<body>
+  <!-- --- FIXED HYBRID BRUTALIST HEADER --- -->
+<header class="fixed-header">
+    <div class="header-container">
+        
+        <!-- Brand Identity / Initials -->
+        <div class="logo">YC</div>
+        
+        <!-- Center Navigation Menu Link Paths (Widescreen Only) -->
+        <nav class="top-nav nav-center desktop-nav">
+            <a href="#">Home</a>
+            <a href="#recommend-songs-section">Music</a>
+            <a href="#analog-archive-section">Gallery</a>
+            <a href="#terminal-operations">Terminal</a>
+            <a href="#radar">Explore</a>
+        </nav>
+        
+        <!-- Action Junction (CTA and Mobile Trigger Sequence) -->
+        <div class="header-actions">
+            <!-- Right Action Button Link Trigger (Shortened Text) -->
+            <a href="#contact" class="header-cta-btn">Get In Touch</a>
+            
+            <!-- Brutalist Mobile Dropdown Module (Hidden on Desktop) -->
+            <div class="brutalist-dropdown mobile-only">
+                <button class="dropdown-trigger-btn" id="menuToggleBtn" aria-label="Toggle Navigation">
+                    <span class="menu-text">MENU</span> <span class="burger-vector">☰</span>
+                </button>
+                <nav class="dropdown-menu-sheet" id="dropdownMenuSheet">
+                    <a href="#">Home</a>
+                    <a href="#recommend-songs-section">Music</a>
+                    <a href="#analog-archive-section">Gallery</a>
+                    <a href="#terminal-operations">Terminal</a>
+                    <a href="#radar">Explore</a>
+                </nav>
+            </div>
+        </div>
+        
+    </div>
+</header>
+  
+
+    
+    <div class="container">
+        
+        <!-- =========================================================
+         🎮 MODULE 1: HERO INTERFACE / MAIN PROFILE OVERVIEW
+         ========================================================= -->
+        <section class="marjo-hero-container">
+            <!-- Blueprint Grid Pattern Canvas Element -->
+            <div class="blueprint-bg-grid"></div>
+            
+            <!-- Floating Identity Status Badges Context Container -->
+
+            
+            <div class="hero-content-core">
+                <!-- Left Text Content Column: Main Welcome Matrix -->
+                <div class="manifesto-text-block">
+                    <h2 class="hero-pre-title">Hi there! 👋</h2>
+                    <h1 class="hero-main-title">I'm <span class="hero-name-highlight">Yuvraj.</span></h1>
+                    
+                    <p class="hero-description">
+                        I'm a high school kid who loves to make cool stuff. Most of my time goes into coding custom web layouts, tracking down raw trails and hidden areas around Indore, putting together solid fits with cool outfits, and keeping a playlist of good tracks running in the background.
+                    </p>
+                    
+                    <div class="action-button-row">
+                        <a href="#contact" class="brutalist-btn cta-primary">
+                            <span>Get In Touch!</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right Visual Layout Column: Avatar Display & Dynamic Sticker Overlays -->
+                <div class="avatar-composition-zone">
+                    <div class="marjo-portrait-card">
+                        <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=500" alt="Steve Avatar" class="hero-avatar">
+                        <div class="corner-title-badge">SURVIVAL_MODE</div>
+                    </div>
+                    
+                    <!-- Graphic Icon Stickers -->
+                    <div class="float-sticker sticker-terminal" title="Coder Base">>_</div>
+                    <div class="float-sticker sticker-camera" title="Photography Gear">📷</div>
+                    <div class="float-sticker sticker-game" title="Gaming Layout">🎮</div>
+                    
+                    <!-- Neobrutalist Scrap Tape Graphic Effect -->
+                    <div class="tape-sticker"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- =========================================================
+         🎵 MODULE 2: RECOMMENDED AUDIO TRACK LIST
+         ========================================================= -->
+        <section id="recommend-songs-section" class="page-section">
+            <h2 class="section-title">Recommend Songs</h2>
+            
+            <div class="apple-style-list-wrapper">
+                <!-- Track Column 01: Elements 1 to 4 -->
+                <div class="track-column">
+                    <div class="apple-track-row" onclick="selectTrack(this)">
+                        <div class="apple-art-container">
+                            <img src="https://res.cloudinary.com/dyf5x6iqz/image/upload/v1780631464/ab67616d0000b273acf9c94f73fede70cca51d5e_rdni9g.jpg" alt="Cover">
+                            <div class="artwork-eq-overlay">
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                            </div>
+                        </div>
+                        <div class="apple-track-details">
+                            <h3 class="apple-track-name">I Love You So</h3>
+                            <p class="apple-track-artist">The Walters</p>
+                        </div>
+                    </div>
+                    
+                    <div class="apple-track-row" onclick="selectTrack(this)">
+                        <div class="apple-art-container">
+                            <img src="https://res.cloudinary.com/dyf5x6iqz/image/upload/ab67616d0000b2733fb89de81cfa5efdf3a2a954_lvtq5t.jpg" alt="Cover">
+                            <div class="artwork-eq-overlay">
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                            </div>
+                        </div>
+                        <div class="apple-track-details">
+                            <h3 class="apple-track-name">Step Into My Life</h3>
+                            <p class="apple-track-artist">Powfu</p>
+                        </div>
+                    </div>
+                    
+                    <div class="apple-track-row" onclick="selectTrack(this)">
+                        <div class="apple-art-container">
+                            <img src="https://res.cloudinary.com/dyf5x6iqz/image/upload/ab67616d0000b273e6065f209e0a01986206bd53_b4dwsm.jpg" alt="Cover">
+                            <div class="artwork-eq-overlay">
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                            </div>
+                        </div>
+                        <div class="apple-track-details">
+                            <h3 class="apple-track-name">Sailor Song</h3>
+                            <p class="apple-track-artist">Gigi Perez</p>
+                        </div>
+                    </div>
+                    
+                    <div class="apple-track-row" onclick="selectTrack(this)">
+                        <div class="apple-art-container">
+                            <img src="https://res.cloudinary.com/dyf5x6iqz/image/upload/ab67616d0000b273a47c6d8a934b4833c0916cc9_yqqggr.jpg" alt="Cover">
+                            <div class="artwork-eq-overlay">
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                            </div>
+                        </div>
+                        <div class="apple-track-details">
+                            <h3 class="apple-track-name">I Thought I Saw...</h3>
+                            <p class="apple-track-artist">She & Him</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Track Column 02: Elements 5 to 8 -->
+                <div class="track-column">
+                    <div class="apple-track-row" onclick="selectTrack(this)">
+                        <div class="apple-art-container">
+                            <img src="https://res.cloudinary.com/dyf5x6iqz/image/upload/ab67616d0000b273d7e1c68ed8e464b03095afda_rnkveg.jpg" alt="Cover">
+                            <div class="artwork-eq-overlay">
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                            </div>
+                        </div>
+                        <div class="apple-track-details">
+                            <h3 class="apple-track-name">20 Min</h3>
+                            <p class="apple-track-artist">Lil Uzi Vert</p>
+                        </div>
+                    </div>
+                    
+                    <div class="apple-track-row" onclick="selectTrack(this)">
+                        <div class="apple-art-container">
+                            <img src="https://res.cloudinary.com/dyf5x6iqz/image/upload/SpotiDown.App_-_Young_Dumb___Broke_-_Khalid_tszdrl.jpg" alt="Cover">
+                            <div class="artwork-eq-overlay">
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                            </div>
+                        </div>
+                        <div class="apple-track-details">
+                            <h3 class="apple-track-name">Young Dumb & Broke</h3>
+                            <p class="apple-track-artist">Khalid</p>
+                        </div>
+                    </div>
+                    
+                    <div class="apple-track-row" onclick="selectTrack(this)">
+                        <div class="apple-art-container">
+                            <img src="https://res.cloudinary.com/dyf5x6iqz/image/upload/SpotiDown.App_-_Falling_Down_-_Bonus_Track_-_Lil_Peep_kbpl5x.jpg" alt="Cover">
+                            <div class="artwork-eq-overlay">
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                            </div>
+                        </div>
+                        <div class="apple-track-details">
+                            <h3 class="apple-track-name">Falling Down</h3>
+                            <p class="apple-track-artist">Lil Peep</p>
+                        </div>
+                    </div>
+                    
+                    <div class="apple-track-row" onclick="selectTrack(this)">
+                        <div class="apple-art-container">
+                            <img src="https://res.cloudinary.com/dyf5x6iqz/image/upload/SpotiDown.App_-_Hate_Me__with_Juice_WRLD__-_Ellie_Goulding_mshk4u.jpg" alt="Cover">
+                            <div class="artwork-eq-overlay">
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                            </div>
+                        </div>
+                        <div class="apple-track-details">
+                            <h3 class="apple-track-name">Hate Me</h3>
+                            <p class="apple-track-artist">Ellie Goulding, juice WRLD</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Track Column 03: Elements 9 to 12 -->
+                <div class="track-column">
+                    <div class="apple-track-row" onclick="selectTrack(this)">
+                        <div class="apple-art-container">
+                            <img src="https://res.cloudinary.com/dyf5x6iqz/image/upload/SpotiDown.App_-_God_s_Plan_-_Drake_pprtvw.jpg" alt="Cover">
+                            <div class="artwork-eq-overlay">
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                            </div>
+                        </div>
+                        <div class="apple-track-details">
+                            <h3 class="apple-track-name">Gods Plan</h3>
+                            <p class="apple-track-artist">Drake</p>
+                        </div>
+                    </div>
+                    
+                    <div class="apple-track-row" onclick="selectTrack(this)">
+                        <div class="apple-art-container">
+                            <img src="https://res.cloudinary.com/dyf5x6iqz/image/upload/SpotiDown.App_-_All_Eyez_On_Me__ft._Big_Syke__-_2Pac_rbjtwg.jpg" alt="Cover">
+                            <div class="artwork-eq-overlay">
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                            </div>
+                        </div>
+                        <div class="apple-track-details">
+                            <h3 class="apple-track-name">All Eyes On Me</h3>
+                            <p class="apple-track-artist">2 Pac</p>
+                        </div>
+                    </div>
+                    
+                    <div class="apple-track-row" onclick="selectTrack(this)">
+                        <div class="apple-art-container">
+                            <img src="https://res.cloudinary.com/dyf5x6iqz/image/upload/SpotiDown.App_-_Big_Poppa_-_2005_Remaster_-_The_Notorious_B.I.G._u78sy2.jpg" alt="Cover">
+                            <div class="artwork-eq-overlay">
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                            </div>
+                        </div>
+                        <div class="apple-track-details">
+                            <h3 class="apple-track-name">Big Poppa-2005 Rem.</h3>
+                            <p class="apple-track-artist">The Notorious B.I.G</p>
+                        </div>
+                    </div>
+                    
+                    <div class="apple-track-row" onclick="selectTrack(this)">
+                        <div class="apple-art-container">
+                            <img src="https://res.cloudinary.com/dyf5x6iqz/image/upload/SpotiDown.App_-_Timeless__feat_Playboi_Carti__-_The_Weeknd_demybl.jpg" alt="Cover">
+                            <div class="artwork-eq-overlay">
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                                <div class="white-eq-bar"></div>
+                            </div>
+                        </div>
+                        <div class="apple-track-details">
+                            <h3 class="apple-track-name">Timeless</h3>
+                            <p class="apple-track-artist">The Weekend</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- =========================================================
+     📷 MODULE 3: ANALOG ARCHIVE // 35MM FILM STRIP GALLERY
+     ========================================================= -->
+        <section id="analog-archive-section" class="page-section">
+            <div class="archive-header-row">
+                <h2 class="section-title">Analog Archive // 35mm Roll</h2>
+                <span class="roll-meta-tag">KODAK 400TX // ISO_400</span>
+            </div>
+            
+            <!-- Film Strip Sliding Track Viewport -->
+            <div class="film-strip-viewport">
+                <div class="film-strip-track">
+                    
+                    <!-- FRAME 01 -->
+                    <div class="film-frame">
+                        <div class="sprocket-holes top-sprockets"><span></span><span></span><span></span><span></span></div>
+                        <div class="frame-content">
+                            <div class="frame-edge-data">01 // EXP_01A</div>
+                            <img src="https://res.cloudinary.com/dyf5x6iqz/image/upload/IMG_9650_asrzez.jpg" alt="Fit Grid 1" class="film-image">
+                            <div class="frame-caption">STREET_GEAR // OVERSIZED_FIT</div>
+                        </div>
+                        <div class="sprocket-holes bottom-sprockets"><span></span><span></span><span></span><span></span></div>
+                    </div>
+                    
+                    <!-- FRAME 02 -->
+                    <div class="film-frame">
+                        <div class="sprocket-holes top-sprockets"><span></span><span></span><span></span><span></span></div>
+                        <div class="frame-content">
+                            <div class="frame-edge-data">02 // EXP_02B</div>
+                            <img src="https://res.cloudinary.com/dyf5x6iqz/image/upload/IMG_4575_wjys6h.jpg" alt="Trail 1" class="film-image">
+                            <div class="frame-caption">MOW_VALLEY // MIST_SYSTEMS</div>
+                        </div>
+                        <div class="sprocket-holes bottom-sprockets"><span></span><span></span><span></span><span></span></div>
+                    </div>
+                    
+                    <!-- FRAME 03 -->
+                    <div class="film-frame">
+                        <div class="sprocket-holes top-sprockets"><span></span><span></span><span></span><span></span></div>
+                        <div class="frame-content">
+                            <div class="frame-edge-data">03 // EXP_03A</div>
+                            <img src="https://res.cloudinary.com/dyf5x6iqz/image/upload/IMG_4796_ksaes0.jpg" alt="Fit Grid 2" class="film-image">
+                            <div class="frame-caption">UTILITY_CORE // CARGO_SET</div>
+                        </div>
+                        <div class="sprocket-holes bottom-sprockets"><span></span><span></span><span></span><span></span></div>
+                    </div>
+                    
+                    <!-- FRAME 04 -->
+                    <div class="film-frame">
+                        <div class="sprocket-holes top-sprockets"><span></span><span></span><span></span><span></span></div>
+                        <div class="frame-content">
+                            <div class="frame-edge-data">04 // EXP_04C</div>
+                            <img src="https://res.cloudinary.com/dyf5x6iqz/image/upload/IMG_E4578_wgq7pr.jpg" alt="Trail 2" class="film-image">
+                            <div class="frame-caption">CHORAL_RANGE // CANYON_DEPTH</div>
+                        </div>
+                        <div class="sprocket-holes bottom-sprockets"><span></span><span></span><span></span><span></span></div>
+                    </div>
+                    
+                    <!-- FRAME 05 -->
+                    <div class="film-frame">
+                        <div class="sprocket-holes top-sprockets"><span></span><span></span><span></span><span></span></div>
+                        <div class="frame-content">
+                            <div class="frame-edge-data">05 // EXP_05A</div>
+                            <img src="https://res.cloudinary.com/dyf5x6iqz/image/upload/IMG_2383_g4ea0q.jpg" alt="Wilderness snapshot" class="film-image">
+                            <div class="frame-caption">DEEP_WOODS // EXPEDITION_00</div>
+                        </div>
+                        <div class="sprocket-holes bottom-sprockets"><span></span><span></span><span></span><span></span></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        
+        <!-- =========================================================
+     💻 MODULE 4: INTERACTIVE FULL-SCREEN COMMAND TERMINAL
+     ========================================================= -->
+        <section id="terminal-operations" class="full-screen-terminal-section">
+            <div class="terminal-card full-screen-variant">
+                <!-- Mac Style Terminal Control Window Bar -->
+                <div class="terminal-header-bar">
+                    <div class="terminal-dots">
+                        <span class="dot-red"></span>
+                        <span class="dot-yellow"></span>
+                        <span class="dot-green"></span>
+                    </div>
+                    <div class="terminal-title-text">sys@mainframe:~</div>
+                    <div class="terminal-status-indicator">SYSTEM: ACTIVE</div>
+                </div>
+                
+                <!-- Code Log Monitor Screen Console Output Display -->
+                <div class="terminal-body-display" id="terminalLog">
+                    <p class="log-init">[BOOT] Initializing full-screen terminal core infrastructure...</p>
+                    <p class="log-success">[OK] Mainframe telemetry link stabilized.</p>
+                    <p class="log-info">[INFO] Type 'help' to see authorized protocol paths or words.</p>
+                </div>
+                
+                <!-- Live Command Prompt Entry Form Row -->
+                <div class="terminal-input-row">
+                    <span class="terminal-prompt">$&gt;</span>
+                    <input type="text" id="terminalInputField" placeholder="Enter secure warp code or text command..." autocomplete="off">
+                </div>
+            </div>
+        </section>
+        
+        <!-- EXTERNAL GEOGRAPHIC ASSET LIBRARIES: LEAFLET ENGINE CORE SCRIPTS -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+        
+        <!-- =========================================================
+     🧭 MODULE 5: ADVENTURE RADAR MAP // INDORE FIELD INTERFACE
+     ========================================================= -->
+        <section class="page-section" id="radar">
+            <h2 class="section-title">VOYAGER LOGS // DISCOVERY GRID</h2>
+            <div class="map-layout">
+                
+                <!-- Interactive Viewport Hub Screen Frame Overlay -->
+                <div class="map-viewport">
+                    <!-- Active Leaflet Interactive Target Canvas Hook Container -->
+                    <div id="liveEngineMap" style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 1;"></div>
+                    
+                    <!-- Background Graphic Elements & Blueprint Topo Shapes -->
+                    <div class="map-blueprint-grid"></div>
+                    <div class="topo-contour" style="width: 400px; height: 300px; top: -50px; left: -50px;"></div>
+                    <div class="topo-contour" style="width: 350px; height: 350px; bottom: -80px; right: -50px;"></div>
+                    
+                    <div class="map-grid-label" style="top: 5%; left: 3%;">MAP // TERRAIN_LOGS</div>
+                </div>
+                
+                <!-- Sidebar Information Panel Sidebar Description Box Block -->
+                <div class="brutalist-card sidebar-panel" id="sidebar-panel">
+                    <div>
+                        <div class="sidebar-media-frame">
+                            <img id="sidebar-img" src="https://res.cloudinary.com/dyf5x6iqz/image/upload/IMG_7756_nnohjq.jpg" alt="Trail Snapshot">
+                        </div>
+                        <!-- Updated Title -->
+                        <div class="sidebar-header" id="sidebar-title">Mohadi Waterfall</div>
+                        <!-- Updated Description -->
+                        <p class="sidebar-text" id="sidebar-desc">A dramatic, wide-canyon plunge waterfall that feels completely cut off from the urban grid. During the monsoon, the deep valley floor transforms into a high-mist zone where the tracks become slick, technical, and enveloped in low-hanging clouds.</p>
+                    </div>
+                    <div>
+                        <!-- Updated Track -->
+                        <div class="sidebar-badge" id="sidebar-track">🎵 Track Vibe: Canyon Echos </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </section>
+        
+    </div> <!-- END OF INLINE FLOW CORE PAGE CONTAINER CONTAINER WRAPPER -->
+    
+    <!-- ICON STYLESHEET EMBED PACKS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- =========================================================
+     🌐 MODULE 6: DIGITAL FOOTPRINT // SOCIAL MATRIX STICKY NOTES
+     ========================================================= -->
+    <section id="contact" class="page-section grid-bg-section">
+        
+        <!-- Seamless Section Splitting Marker Line Interface -->
+        <div class="brutalist-divider-container">
+            <div class="solid-black-line"></div>
+            <div class="divider-center-tape"></div>
+        </div>
+        
+        <!-- Section Title Block Container Layout -->
+        <div class="contact-header-wrap">
+            <h2 class="brutalist-title-box">GET IN TOUCH</h2>
+            <p class="contact-subtitle">Find me here</p>
+        </div>
+        
+        <!-- Grid Matrix holding the individual stylized sticky platform link nodes -->
+        <div class="sticky-matrix">
+            
+            <!-- INSTAGRAM LINK NODE -->
+            <a href="https://www.instagram.com/yuvr.ajchouhan?igsh=MTNsbjFtMmcyeGp2NQ==" target="_blank" class="sticky-card bg-cyan rot-left">
+                <div class="tape"></div>
+                <i class="fa-brands fa-instagram sticky-icon"></i>
+                <span class="sticky-label">Instagram</span>
+            </a>
+            
+            <!-- GITHUB LINK NODE -->
+            <a href="https://github.com/YuvrajChouhan09" target="_blank" class="sticky-card bg-yellow rot-right">
+                <div class="tape"></div>
+                <i class="fa-brands fa-github sticky-icon"></i>
+                <span class="sticky-label">GitHub</span>
+            </a>
+            
+            <!-- DISCORD LINK NODE -->
+            <a href="https://discord.gg/syCsd77BR" target="_blank" class="sticky-card bg-pink rot-left-slight">
+                <div class="tape"></div>
+                <i class="fa-brands fa-discord sticky-icon"></i>
+                <span class="sticky-label">Discord</span>
+            </a>
+            
+            <!-- REDDIT LINK NODE -->
+            <a href="https://www.reddit.com/u/Yuvraj_Gamer/s/ij3BW3wlss" target="_blank" class="sticky-card bg-orange rot-right-slight">
+                <div class="tape"></div>
+                <i class="fa-brands fa-reddit-alien sticky-icon"></i>
+                <span class="sticky-label">Reddit</span>
+            </a>
+            
+            <!-- APPLE MUSIC LINK NODE -->
+            <a href="https://music.apple.com/profile/yurox?ls" target="_blank" class="sticky-card bg-green rot-left">
+                <div class="tape"></div>
+                <i class="fa-brands fa-apple sticky-icon"></i>
+                <span class="sticky-label">Apple Music</span>
+            </a>
+            
+            <!-- SPOTIFY LINK NODE -->
+            <a href="https://open.spotify.com/user/31ri4tir4xfksf44ipwculukxgle?si=P9kDX0BVSpSBP5MJCZy2pA" target="_blank" class="sticky-card bg-purple rot-right">
+                <div class="tape"></div>
+                <i class="fa-brands fa-spotify sticky-icon"></i>
+                <span class="sticky-label">Spotify</span>
+            </a>
+            
+        </div>
+    </section>
+    
+    <!-- =========================================================
+     📬 MODULE 7: FEEDBACK NODE SYSTEM TERMINAL INPUT (FORMSPREE)
+     ========================================================= -->
+    <section id="feedback-node" class="feedback-bg-section">
+        <!-- Clean Top Seam Boundary Edge Line & Center Badge Sticky Overlay Layer -->
+        <div class="feedback-top-line"></div>
+        <div class="feedback-center-tape"></div>
+        
+        <div class="feedback-container">
+            <!-- Form System Module Header Metadata Display Title -->
+            <div class="feedback-header">
+                <h2 class="brutalist-title-box">FEEDBACK // LOGS</h2>
+                <p class="feedback-subtitle">Drop your suggestions, bug reports, or feature requests below.</p>
+            </div>
+            
+            <!-- Live Active Formspree Form Frame Input Block Element -->
+            <form action="https://formspree.io/f/mqeoaeak" method="POST" class="brutalist-form">
+                <!-- User Identification Input Element Wrapper Box -->
+                <div class="form-group">
+                    <label for="user-name" class="form-label">NAME :</label>
+                    <input type="text" id="user-name" name="name" class="brutalist-input" placeholder="Enter your name..." required>
+                </div>
+                
+                <!-- Message / Suggestion Core Plain-Text Form Block Wrapper Area -->
+                <div class="form-group">
+                    <label for="user-msg" class="form-label">FEEDBACK_TEXT :</label>
+                    <textarea id="user-msg" name="message" class="brutalist-input brutalist-textarea" placeholder="Type your message or system suggestions here..." required></textarea>
+                </div>
+                
+                <!-- Active Network Transmit Submit Trigger Key Switch Button -->
+                <button type="submit" class="brutalist-submit-btn">
+                    TRANSMIT FEEDBACK <span class="btn-arrow">→</span>
+                </button>
+            </form>
+        </div>
+    </section>
+    
+    
+    <!-- =========================================================
+     🛑 GLOBAL SITE FOOTER GRID // LEGAL SUMMARY SYSTEM STAMP
+     ========================================================= -->
+    <footer id="socials">
+        <div class="footer-container">
+            <div class="footer-columns">
+                <!-- Left Info Meta Column Block -->
+                <div class="footer-info">
+                    <h3>NATURESEEKER</h3>
+                    <p>Documenting local trails, curating playlists, and building digital spaces for the journey.</p>
+                </div>
+                
+                <!-- Right Network Navigation Directories Links Grid System Block Map -->
+                <div class="footer-links-grid">
+                    <div class="link-group">
+                        <h4>STATIONS</h4>
+                        <a href="https://github.com/YuvrajChouhan09" target="_blank">GitHub</a>
+                        <a href="https://www.instagram.com/yuvr.ajchouhan?igsh=MTNsbjFtMmcyeGp2NQ==" target="_blank">Instagram</a>
+                        <a href="https://www.reddit.com/u/Yuvraj_Gamer/s/ij3BW3wlss" target="_blank">Reddit</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>AUDIO</h4>
+                        <a href="https://open.spotify.com/user/31ri4tir4xfksf44ipwculukxgle?si=P9kDX0BVSpSBP5MJCZy2pA" target="_blank">Spotify</a>
+                        <a href="https://music.apple.com/profile/yurox?ls" target="_blank">Apple Music</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Brutalist Aesthetic Frame Text Stamp System Overload Label -->
+            <div class="footer-stamp">BUILT // BY // YUVRAJ</div>
+        </div>
+    </footer>
+    
+    <!-- =========================================================
+     🔊 MODULE 8: BOTTOM FLOATING MEDIA BAR AUDIO CONTROLLER SYSTEM DOCK
+     ========================================================= -->
+    <div class="media-dock-bar">
+        <div class="dock-container">
+            <!-- Hidden Native HTML5 Audio Dynamic Engine Stream Tag Hook -->
+            <audio id="html5-audio-engine"></audio>
+            
+            <!-- Track Description Label Container Layout View -->
+            <div class="dock-meta">
+                <div class="dock-track-title" id="dock-title">Select a Track</div>
+                <div class="dock-track-artist" id="dock-artist">Artist Info</div>
+            </div>
+            
+            <!-- Master Interface Playback Control Toggle Switch Buttons Row -->
+            <div class="dock-controls">
+                <button class="dock-btn" onclick="triggerPrevTrack()">◀◀</button>
+                <button class="dock-btn-main" id="dock-play-btn" onclick="triggerPlaybackToggle()">PLAY</button>
+                <button class="dock-btn" onclick="triggerNextTrack()">▶▶</button>
+            </div>
+            
+            <!-- System Running Engine Health Status Network Live Light Tag Label -->
+            <div class="dock-status-tag">AUDIO ENGINE LIVE •</div>
+        </div>
+    </div>
+    
+    <!-- COMPONENT LOGIC CONFIG SCRIPT MODULE ATTACHMENT -->
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1571 @@
+/* --- BRUTALIST & NOTEBOOK SYSTEM CONFIGURATIONS --- */
+:root {
+    /* Base Notebook Canvas */
+    --bg-gradient: linear-gradient(135deg, #fdfbf7 0%, #f4f0ea 50%, #ebe5d9 100%);
+    --text-color: #111111;
+    --border-thickness: 3px;
+    --border-color: #111111;
+    --song-section-bg: #f9f6f0;
+
+    /* 🎯 FUNCTIONAL COLORS (Strictly separated) */
+    --action-click: #ff4757;      /* Punchy Red: ONLY for primary buttons (Get in Touch, Play) */
+    --highlight-text: #eccc68;    /* Highlighter Yellow: ONLY for your name and text markers */
+    
+    /* 🧩 AESTHETIC BLOCKS (For stickers, cards, and radar) */
+    --cyber-blue: #1e90ff;        
+    --mint-block: #2ed573;
+    --lavender-block: #a4b0be;
+    --terracotta-block: #ffa502;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-gradient);
+    background-size: 400% 400%;
+    animation: shiftMeshBackground 25s ease infinite;
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+@keyframes shiftMeshBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+/* ========================================================= */
+/* 💻 FIXED WIDESCREEN SYSTEM                                */
+/* ========================================================= */
+
+body {
+    padding-top: 45px; 
+}
+
+header.fixed-header {
+    width: 100%;
+    background: #ffffff; 
+    border-bottom: var(--border-thickness) solid var(--border-color);
+    padding: 15px 0;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 99999; 
+}
+
+.header-container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex !important;
+    flex-direction: row !important; /* Force straight line layout */
+    justify-content: space-between !important; /* Push logo left, actions right */
+    align-items: center !important;
+    flex-wrap: nowrap !important; 
+}
+
+/* BOXED LOGO STICKER PROFILE */
+.logo {
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 0px;
+    background: var(--terracotta-block);
+    color: var(--text-color);
+    padding: 8px 12px;
+    border: var(--border-thickness) solid var(--border-color);
+    border-radius: 8px; 
+    box-shadow: 4px 4px 0px var(--border-color);
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* CENTER NAVIGATION LINKS BLOCK */
+.desktop-nav {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.desktop-nav a {
+    text-decoration: none;
+    color: #111111; 
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    border: 2px solid transparent;
+    transition: all 0.1s ease;
+}
+
+.desktop-nav a:hover {
+    background: var(--yellow-block);
+    border: 2px solid var(--border-color);
+    box-shadow: 3px 3px 0px var(--border-color);
+}
+
+/* RIGHT HIGH-CONTRAST ACTION CONTAINER */
+.header-actions {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 15px;
+    flex-wrap: nowrap !important;
+}
+
+.header-cta-btn {
+    text-decoration: none;
+    color: #111111;
+    background: #ff7675; 
+    font-weight: 900;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    border: var(--border-thickness) solid var(--border-color);
+    box-shadow: 4px 4px 0px var(--border-color);
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease;
+    white-space: nowrap;
+}
+
+.header-cta-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px var(--border-color);
+    background: var(--mint-block);
+}
+
+.mobile-only {
+    display: none !important;
+}
+
+
+/* ========================================================= */
+/* 🎯 SNAPPY POP-IN INTERFACE ANIMATION KEYFRAME             */
+/* ========================================================= */
+@keyframes brutalistPopIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-12px) scale(0.92) rotate(-1.5deg);
+        box-shadow: 0px 0px 0px transparent;
+    }
+    65% {
+        transform: translateY(3px) scale(1.03) rotate(0.5deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
+        box-shadow: 6px 6px 0px var(--border-color);
+    }
+}
+
+/* --- CORE PAGE INNER WRAPPER --- */
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto 160px auto; 
+}
+
+.brutalist-card {
+    background: #ffffff;
+    border: var(--border-thickness) solid var(--border-color);
+    box-shadow: 8px 8px 0px var(--border-color);
+    padding: 30px;
+}
+
+/* --- FULL-SCREEN MARJO-STYLE HERO INTERFACE --- */
+.marjo-hero-container {
+    position: relative;
+    width: 100vw;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+    background-color: #fafafa;
+    overflow: visible;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    border-bottom: var(--border-thickness) solid var(--border-color);
+}
+
+/* DENSE COMPACT BLUEPRINT MESH BACKGROUND */
+.blueprint-bg-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    background-size: 14px 14px; /* Dropped grid sizes down for explicit structural density */
+    background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+}
+
+/* BRUTALIST COLORED NAME HIGHLIGHT HURDLE */
+.hero-name-highlight {
+    background: #0096E3;
+    color: var(--text-color);
+    padding: 0 12px;
+    display: inline-block;
+    border: 3px solid var(--border-color);
+    box-shadow: 4px 4px 0px var(--border-color);
+    transform: rotate(-1deg);
+    margin-left: 5px;
+}
+
+/* MAIN FIELD ENVIRONMENT IDENTITY BADGES */
+
+
+.badge-pill {
+    background: #ffffff;
+    border: 3px solid #111111;
+    padding: 10px 20px;
+    font-weight: 900;
+    font-size: 0.85rem;
+    box-shadow: 5px 5px 0px #111111;
+    border-radius: 4px;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.badge-pill:hover {
+    transform: scale(1.05) translateY(-2px);
+    background: var(--mint-block);
+}
+
+.circle-blur {
+    width: 450px;
+    height: 450px;
+    background: rgba(232, 219, 252, 0.4); /* Refreshed color overlay to soft lavender */
+    filter: blur(120px);
+    border-radius: 50%;
+    top: 5%;
+    right: 10%;
+    z-index: -1;
+}
+
+/* INNER LAYOUT STRUCTURAL COLUMN MATRIX */
+.hero-content-core {
+    position: relative;
+    z-index: 5;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 60px;
+    width: 92%;
+    max-width: 1150px;
+    align-items: center;
+}
+
+.manifesto-text-block { 
+    display: flex; 
+    flex-direction: column; 
+}
+
+.hero-pre-title { 
+    font-size: 1.9rem; 
+    font-weight: 900; 
+    margin-bottom: 8px; 
+    color: #ff7675; /* Warm punchy title detail tracking color accent */
+}
+
+.hero-main-title { 
+    font-size: 4rem; 
+    line-height: 1.05; 
+    font-weight: 900; 
+    text-transform: uppercase; 
+    margin-bottom: 25px; 
+    letter-spacing: -1px; 
+}
+
+.hero-description { 
+    font-size: 1.25rem; 
+    line-height: 1.6; 
+    color: #222222; 
+    margin-bottom: 35px; 
+    max-width: 620px; 
+}
+
+/* CALL TO ACTION BUTTON BAR */
+.action-button-row { 
+    display: flex; 
+    gap: 20px; 
+    flex-wrap: wrap; 
+}
+
+.brutalist-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #111111;
+    font-weight: 900;
+    font-size: 1.05rem;
+    border: 3px solid #111111;
+    padding: 15px 30px;
+    box-shadow: 5px 5px 0px #111111;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.cta-primary { background:#ff7675; }
+.cta-secondary { background: #ffffff; }
+
+.brutalist-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0px #111111;
+}
+.cta-primary:hover { background: var(--mint-block); }
+
+/* SKEWED AVATAR FRAME PORTRAIT CONTAINER */
+.avatar-composition-zone {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    z-index: 6;
+}
+
+.marjo-portrait-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--yellow-block);
+    border: 3px solid #111111;
+    box-shadow: 8px 8px 0px #111111;
+    transform: rotate(2.5deg);
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+}
+
+.hero-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    image-rendering: pixelated; 
+}
+
+.corner-title-badge {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--lavender-block);
+    border-top: 3px solid #111111;
+    border-left: 3px solid #111111;
+    padding: 6px 14px;
+    font-weight: 900;
+    font-size: 0.8rem;
+}
+
+/* UNIFIED FLOATING GRAPHIC STICKERS */
+.float-sticker {
+    position: absolute;
+    z-index: 20; 
+    border: 3px solid #111111;
+    box-shadow: 4px 4px 0px #111111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    border-radius: 8px;
+    width: 62px;
+    height: 58px;
+}
+
+.sticker-terminal {
+    color:#fff;
+    background: #2B2B2B;
+    top: -22px;
+    left: -22px;
+    transform: rotate(-8deg);
+    font-size: 1.35rem;
+}
+
+.sticker-camera {
+    background: #A2FF00;
+    bottom: 45px;
+    left: -25px;
+    transform: rotate(12deg);
+    font-size: 1.4rem;
+}
+
+.sticker-game {
+    background: #7600C8;
+    bottom: -15px;
+    right: 35px;
+    transform: rotate(-15deg);
+    font-size: 1.4rem;
+}
+
+.tape-sticker {
+    position: absolute;
+    width: 85px;
+    height: 24px;
+    background: rgba(255, 218, 193, 0.85);
+    top: -12px;
+    right: 45px;
+    transform: rotate(14deg);
+    z-index: 15;
+}
+
+/* --- 🎵 REFRESHED RECOMMEND SONGS GRID ENGINE --- */
+#recommend-songs-section {
+    background-color: var(--song-section-bg);
+    border: var(--border-thickness) solid var(--border-color);
+    box-shadow: 8px 8px 0px var(--border-color);
+    padding: 40px;
+    border-radius: 6px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+/* Multi-Column 3x4 Layout Engine Frame */
+.apple-style-list-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Generates 3 horizontal layout tracks */
+    gap: 20px;
+    width: 100%;
+}
+
+.track-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Track Row Item Mechanics */
+.apple-track-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #ffffff;
+    border: 2px solid var(--border-color);
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px var(--border-color);
+    transition: all 0.15s ease;
+}
+
+.apple-track-row:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 5px 5px 0px var(--border-color);
+    background: var(--yellow-block);
+}
+
+/* Dynamic Active Styling Hooks */
+.apple-track-row.is-playing {
+    border-color: #ff7675;
+    background: #fffdf9;
+}
+
+.apple-art-container {
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--border-color);
+    flex-shrink: 0;
+}
+
+.apple-art-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Real-time Visualizer EQ Bars Code Overlay */
+.artwork-eq-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.65);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 2px;
+    padding-bottom: 8px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.apple-track-row.audio-active .artwork-eq-overlay {
+    opacity: 1;
+}
+
+.white-eq-bar {
+    width: 3px;
+    height: 15px;
+    background: #ffffff;
+    animation: bounceEQ 0.8s ease infinite alternate;
+}
+.white-eq-bar:nth-child(2) { animation-delay: 0.15s; height: 18px; }
+.white-eq-bar:nth-child(3) { animation-delay: 0.35s; height: 12px; }
+.white-eq-bar:nth-child(4) { animation-delay: 0.05s; height: 16px; }
+
+@keyframes bounceEQ {
+    0% { transform: scaleY(0.3); }
+    100% { transform: scaleY(1.1); }
+}
+
+.apple-track-details {
+    min-width: 0; /* Safeguards internal metadata string calculations */
+}
+
+.apple-track-name {
+    font-size: 0.95rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.apple-track-artist {
+    font-size: 0.75rem;
+    color: #555555;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 2px;
+}
+
+/* --- DYNAMIC VISUAL FIELD RADAR GEOGRAPHY MAP --- */
+.page-section { margin-top: 80px; margin-bottom: 0px; }
+.section-title { font-size: 2.2rem; text-transform: uppercase; margin-bottom: 25px; }
+
+.map-layout {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 30px;
+}
+
+.map-viewport {
+    height: 480px;
+    background: #11141a; 
+    border: var(--border-thickness) solid var(--border-color);
+    box-shadow: 8px 8px 0px var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+#liveEngineMap {
+    filter: contrast(105%) brightness(95%) saturate(85%);
+}
+
+.map-blueprint-grid {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 35px 35px;
+    background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+    z-index: 2;
+    pointer-events: none; 
+}
+
+.topo-contour {
+    position: absolute;
+    border: 2px dashed rgba(255,255,255,0.05);
+    border-radius: 50% 40% 60% 40% / 40% 50% 40% 60%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.map-grid-label {
+    position: absolute;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 1px;
+    z-index: 3;
+    pointer-events: none;
+    font-family: monospace;
+}
+
+/* Custom map wrappers generated by Leaflet */
+.custom-map-wrapper {
+    z-index: 1000 !important;
+    background: transparent;
+    border: none;
+}
+
+/* ⚠️ CRITICAL: Must be relative, NOT absolute! */
+.anchor-node {
+    width: 18px;
+    height: 18px;
+    background: #ffffff;
+    border: 3px solid var(--border-color);
+    border-radius: 50%;
+    box-shadow: 2px 2px 0px var(--border-color);
+    position: relative;
+    margin: 0;
+}
+
+.anchor-node::after {
+    content: 'INDORE CITY';
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.65rem;
+    font-weight: bold;
+    white-space: nowrap;
+    background: var(--border-color);
+    color: #ffffff;
+    padding: 2px 6px;
+    border: 1px solid #ffffff;
+}
+
+/* ⚠️ CRITICAL: Must be relative, NOT absolute! */
+.pin-node {
+    width: 26px;
+    height: 26px;
+    background: #2B10FF;
+    border: 3px solid var(--border-color);
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    box-shadow: 3px 3px 0px var(--border-color);
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.2s;
+    cursor: pointer;
+    position: relative;
+    margin: 0;
+}
+
+.pin-node::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #ffffff;
+    position: absolute;
+    border-radius: 50%;
+    top: 6px;
+    left: 7px;
+}
+
+.pin-node:hover,
+.pin-node.active-pin {
+    transform: rotate(-45deg) scale(1.25) translate(2px, -2px);
+    background: #F4FF08 !important;
+}
+.sidebar-panel {
+    background: var(--yellow-block);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-media-frame {
+    width: 100%;
+    height: 190px;
+    border: var(--border-thickness) solid var(--border-color);
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 4px 4px 0px var(--border-color);
+}
+
+.sidebar-media-frame img { width: 100%; height: 100%; object-fit: cover; }
+.sidebar-header { font-size: 1.5rem; font-weight: 900; text-transform: uppercase; margin-bottom: 8px; }
+.sidebar-text { font-size: 0.95rem; line-height: 1.4; margin-bottom: 15px; }
+.sidebar-badge { background: #ffffff; border: 2px solid var(--border-color); padding: 6px 12px; font-size: 0.85rem; font-weight: bold; display: inline-block; box-shadow: 2px 2px 0px var(--border-color); }
+
+/* Hide tracking tags */
+.leaflet-control-attribution { display: none !important; }
+
+
+/* --- ANALOG FILM STRIP ENGINE (COMPACT PROFILE) --- */
+#analog-archive-section {
+    padding: 40px 0;
+    width: 100%;
+    background: transparent;
+    overflow: hidden;
+}
+
+.archive-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #111111;
+    padding-bottom: 10px;
+}
+
+.roll-meta-tag {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #ff7675;
+    letter-spacing: 1px;
+}
+
+/* HORIZONTAL SCROLL CANVAS */
+.film-strip-viewport {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+    cursor: grab;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+
+.film-strip-viewport::-webkit-scrollbar { display: none; }
+.film-strip-viewport:active { cursor: grabbing; }
+
+.film-strip-track {
+    display: inline-flex;
+    gap: 12px;
+    background: #121212; 
+    padding: 12px 15px; 
+    border-radius: 4px;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.8);
+}
+
+.film-frame {
+    display: flex;
+    flex-direction: column;
+    background: #121212;
+    padding: 0 6px;
+}
+
+.frame-content {
+    background: #000000;
+    padding: 10px;
+    position: relative;
+    border-left: 1px solid rgba(255,255,255,0.03);
+    border-right: 1px solid rgba(255,255,255,0.03);
+}
+
+.frame-edge-data {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.65rem;
+    color: #cc6600; 
+    font-weight: bold;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.film-image {
+    width: 290px; 
+    height: 210px;
+    object-fit: cover;
+    filter: grayscale(15%) contrast(110%);
+    transition: filter 0.3s ease;
+    display: block;
+}
+
+.film-frame:hover .film-image { filter: grayscale(0%) contrast(100%); }
+.frame-caption { font-family: 'Courier New', Courier, monospace; font-size: 0.7rem; color: #cc6600; font-weight: bold; margin-top: 6px; text-align: center; }
+
+.sprocket-holes { display: flex; justify-content: space-around; padding: 4px 0; background: #121212; }
+.sprocket-holes span { width: 12px; height: 14px; background: #070707; border-radius: 2px; box-shadow: inset 0 1px 3px rgba(0,0,0,0.9), 0 1px 0 rgba(255,255,255,0.03); }
+.top-sprockets { padding-bottom: 6px; }
+.bottom-sprockets { padding-top: 6px; }
+
+
+/* --- 🧱 SECTION 7: GET IN TOUCH (STICKY NOTE GRID) --- */
+
+/* Blueprint / Notebook Grid Background (Shrunk to 12px boxes) */
+/* Blueprint / Notebook Grid Background (Kept dense at 12px) */
+.grid-bg-section {
+    background-color: #fdfdfd;
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px), 
+        linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
+    background-size: 12px 12px;
+    padding-bottom: 80px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* --- VISIBILITY & ALIGNMENT FIX --- */
+.brutalist-divider-container {
+    position: relative;
+    
+    /* ⚠️ FORCES THE ENTIRE TAPE AND LINE TO RENDER ON TOP OF THE PREVIOUS SECTION */
+    z-index: 1000 !important; 
+    
+    width: 100%;
+    height: 50px;
+    margin-top: -25px; /* Keeps the line dead-center on the background seam */
+    margin-bottom: 40px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Perfect viewport-edge snapping line */
+.solid-black-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 4px; 
+    background-color: #111111;
+    z-index: 1;
+}
+
+/* High-contrast fully visible tape */
+.divider-center-tape {
+    position: relative;
+    z-index: 2;
+    width: 95px;
+    height: 26px;
+    background-color: rgba(255, 223, 107, 0.9); 
+    border: 1px solid rgba(0,0,0,0.15);
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.08);
+    transform: rotate(3.5deg); 
+}
+
+/* --- THE NEW DIVIDER CONTAINER & CENTER TAPE --- */
+.squiggly-divider-container {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Prevents text-height: ; line from breaking page width */
+}
+
+.squiggly-line {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='40' viewBox='0 0 200 40'%3E%3Cpath d='M0,20 Q10,10 20,20 T45,15 T65,25 T85,17 T110,23 T130,15 T150,20 T175,13 T200,20' fill='none' stroke='%23111' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-position: center;
+    z-index: 1;
+}
+
+/* The yellow tape stuck perfectly in the middle of the line */
+/* Header Styling */
+.contact-header-wrap {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.brutalist-title-box {
+    display: inline-block;
+    background-color: #ffd83b;
+    color: #111;
+    font-size: 2.2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border: 4px solid #111;
+    box-shadow: 6px 6px 0px #111;
+    margin-bottom: 15px;
+}
+
+.contact-subtitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* --- DENSER GRID LAYOUT --- */
+.sticky-matrix {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Fits 4 boxes per row now */
+    gap: 20px; /* Tighter gap */
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 20px;
+}
+
+/* Scaled-down Individual Sticky Notes */
+.sticky-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px; /* Smaller padding */
+    border: 3px solid #111; /* Thinner border for proportion */
+    box-shadow: 6px 6px 0px #111; /* Tighter shadow */
+    text-decoration: none;
+    color: #111;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-height: 140px; /* Shorter card */
+}
+
+.sticky-card:hover {
+    box-shadow: 8px 8px 0px #111;
+    z-index: 10;
+}
+
+/* Scaled-down Translucent Tape */
+.tape {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-3deg);
+    width: 60px; /* Shorter tape */
+    height: 20px; /* Thinner tape */
+    background-color: rgba(255, 223, 107, 0.85);
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    z-index: 5;
+}
+
+/* Smaller Icon & Typography */
+.sticky-icon {
+    font-size: 2.5rem; /* Down from 3.5rem */
+    margin-bottom: 10px;
+}
+
+.sticky-label {
+    font-family: 'Caveat', cursive;
+    font-size: 1.4rem; /* Down from 1.8rem */
+}
+
+/* Card Background Colors */
+.bg-cyan { background-color: #63dcf0; }
+.bg-yellow { background-color: #292929; }
+.bg-pink { background-color: #8B6BFF; }
+.bg-orange { background-color: #FF8043; }
+.bg-green { background-color: #F83737; }
+.bg-purple { background-color: #14C100; }
+
+/* Rotations for the "Messy" Board Look */
+.rot-left { transform: rotate(-2deg); }
+.rot-right { transform: rotate(3deg); }
+.rot-left-slight { transform: rotate(-1deg); }
+.rot-right-slight { transform: rotate(1.5deg); }
+
+.rot-left:hover { transform: translateY(-5px) rotate(-2deg); }
+.rot-right:hover { transform: translateY(-5px) rotate(3deg); }
+.rot-left-slight:hover { transform: translateY(-5px) rotate(-1deg); }
+.rot-right-slight:hover { transform: translateY(-5px) rotate(1.5deg); }
+/* --- 🧱 SECTION 6: DIGITAL FOOTPRINT // SOCIAL MATRIX --- */
+#social-matrix {
+    padding-bottom: 0px !important;   /* Pulls the bottom edge of Section 6 all the way down */
+    margin-bottom: 0px !important;
+    position: relative;
+    z-index: 1; 
+}
+
+/* --- 🧱 SECTION 8: FEEDBACK NODE --- */
+.feedback-bg-section {
+    background-color: #f9f9f9;
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px), 
+        linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);
+    background-size: 12px 12px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px !important; 
+    padding-bottom: 80px;
+    
+    /* ⚠️ CHANGED: Must be relative with a higher z-index than social matrix */
+    position: relative;
+    z-index: 2; 
+    
+    /* ⚠️ REMOVED overflow-x: hidden here because it can sometimes clip the Y-axis (top of sticker) */
+}
+
+/* 1. The Solid Black Seam Line */
+.feedback-top-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: #111111;
+    z-index: 10;
+}
+
+/* 2. The Center Scrap Tape */
+.feedback-center-tape {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 95px;
+    height: 26px;
+    background-color: rgba(255, 223, 107, 0.95); 
+    border: 1px solid rgba(0,0,0,0.15);
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.08);
+    
+    /* Pulls it up 13px so exactly half sits on the top section, half on the bottom */
+    transform: translate(-50%, -13px) rotate(3.5deg); 
+    
+    /* ⚠️ FORCES THE TAPE ON TOP OF BOTH BACKGROUNDS */
+    z-index: 100 !important; 
+}/* --- Form Layout & Component Styling --- */
+.feedback-container {
+    width: 100%;
+    max-width: 650px;
+}
+
+.feedback-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.brutalist-title-box {
+    display: inline-block;
+    background-color: #ffd83b;
+    color: #111;
+    font-size: 2.2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border: 4px solid #111;
+    box-shadow: 6px 6px 0px #111;
+    margin-bottom: 15px;
+}
+
+.feedback-subtitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.brutalist-form {
+    background: #ffffff;
+    border: 4px solid #111111;
+    box-shadow: 8px 8px 0px #111111;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-label {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    font-weight: 900;
+    color: #111111;
+    text-transform: uppercase;
+}
+
+.brutalist-input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: #ffffff;
+    border: 3px solid #111111;
+    color: #111111;
+    border-radius: 0px; 
+    transition: all 0.2s ease;
+}
+
+.brutalist-input:focus {
+    outline: none;
+    background: #fffdf3; 
+    box-shadow: 4px 4px 0px #111111;
+    transform: translate(-2px, -2px);
+}
+
+.brutalist-textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.brutalist-submit-btn {
+    background-color: #ffd83b; 
+    color: #111111;
+    border: 3px solid #111111;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 900;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 4px 4px 0px #111111;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.brutalist-submit-btn:hover {
+    background-color: #ffeb3b;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #111111;
+}
+
+.brutalist-submit-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #111111;
+}
+
+
+
+/* --- UNRESTRICTED SYSTEM FOOTER UNIONS --- */
+footer {
+    width: 100vw;
+    background: var(--border-color);
+    color: #ffffff;
+    padding: 60px 0;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+}
+
+.footer-container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-info h3 { font-size: 1.8rem; margin-bottom: 10px; color: var(--mint-block); }
+.footer-info p { max-width: 350px; font-size: 0.95rem; color: #ccc; }
+
+.footer-links-grid { display: flex; gap: 60px; }
+.link-group h4 { font-size: 0.9rem; margin-bottom: 15px; color: var(--yellow-block); letter-spacing: 1px; }
+.link-group a { display: block; color: #ffffff; text-decoration: none; margin-bottom: 8px; font-size: 1.05rem; }
+.link-group a:hover { color: var(--terracotta-block); text-decoration: underline; }
+
+.footer-stamp {
+    font-size: 6vw;
+    font-weight: 900;
+    text-align: center;
+    border-top: 2px dashed rgba(255,255,255,0.15);
+    padding-top: 20px;
+    color: rgba(255,255,255,0.03);
+}
+
+/* --- 🔒 FIXED, LOCKED & CENTERED AUDIO MEDIA DOCK --- */
+.media-dock-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    border-top: var(--border-thickness) solid var(--border-color);
+    padding: 15px 0;
+    z-index: 99999;
+    box-shadow: 0px -10px 40px rgba(0,0,0,0.1);
+}
+
+.dock-container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Strict 3-column system alignment configuration */
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; 
+    align-items: center;
+}
+
+/* Metadata Segment - Left Column Block */
+.dock-meta {
+    min-width: 0; /* Prevents long flex-string expansions from expanding layout columns */
+    padding-right: 20px;
+}
+
+.dock-track-title { 
+    font-size: 1.2rem; 
+    font-weight: 900; 
+    text-transform: uppercase; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Safely cuts off extra long song titles with an ellipsis (...) */
+}
+
+.dock-track-artist { 
+    font-size: 0.85rem; 
+    color: #555; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 2px;
+}
+
+/* Navigation Interface Elements - Centered Column Block */
+.dock-controls { 
+    display: flex; 
+    gap: 12px; 
+    justify-content: center;
+}
+
+.dock-btn, .dock-btn-main {
+    background: #ffffff;
+    border: 2px solid var(--border-color);
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px var(--border-color);
+}
+
+.dock-btn-main { background: var(--mint-block); min-width: 95px; }
+.dock-btn:active, .dock-btn-main:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0px var(--border-color); }
+
+/* Status Marker Segment - Right Column Block */
+.dock-status-tag { 
+    font-size: 0.8rem; 
+    font-weight: bold; 
+    color: #2ecc71; 
+    justify-self: end; /* Snaps safely to the far right margin */
+}
+
+/* --- 🖥️ SECTION 4: FULL-SCREEN COMMAND TERMINAL CORE --- */
+.full-screen-terminal-section {
+    width: 100vw;
+    height: 85vh; /* Fills the screen landscape beautifully */
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    background: #0f141c;
+    border-top: var(--border-thickness) solid var(--border-color);
+    border-bottom: var(--border-thickness) solid var(--border-color);
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+}
+
+.terminal-card.full-screen-variant {
+    width: 100%;
+    height: 100%;
+    background: #0f141c;
+    border: none;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.terminal-header-bar {
+    background: #1a2230;
+    border-bottom: var(--border-thickness) solid var(--border-color);
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.terminal-dots {
+    display: flex;
+    gap: 8px;
+}
+.terminal-dots span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+}
+.dot-red { background: var(--action-click); }
+.dot-yellow { background: var(--highlight-text); }
+.dot-green { background: var(--mint-block); }
+
+.terminal-title-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    font-weight: 900;
+    color: #a4b0be;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.terminal-status-indicator {
+    margin-left: auto;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: var(--mint-block);
+    border: 1px solid var(--mint-block);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.terminal-body-display {
+    flex-grow: 1;
+    padding: 25px;
+    overflow-y: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+.terminal-body-display p { margin-bottom: 8px; white-space: pre-wrap; }
+.log-init { color: #a4b0be; }
+.log-success { color: var(--mint-block); }
+.log-info { color: #1e90ff; }
+.log-error { color: var(--action-click); font-weight: bold; }
+.log-user { color: var(--highlight-text); }
+
+.terminal-input-row {
+    display: flex;
+    align-items: center;
+    background: #121822;
+    border-top: var(--border-thickness) solid var(--border-color);
+    padding: 18px 25px;
+}
+
+.terminal-prompt {
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--mint-block);
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-right: 12px;
+    user-select: none;
+}
+
+#terminalInputField {
+    flex-grow: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+    color: #ffffff;
+    width: 100%;
+}
+
+/* ========================================================= */
+/* 📱 RESPONSIVE BREAKPOINTS & MOBILE CLEARANCES             */
+/* ========================================================= */
+
+/* --- LARGE TABLETS & SMALL DESKTOPS (max-width: 980px) --- */
+@media (max-width: 980px) {
+    .apple-style-list-wrapper {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .hero-content-core {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        text-align: center;
+    }
+    .badge-pill, .float-sticker, .tape-sticker { 
+        display: none !important; 
+    }
+    .avatar-composition-zone { 
+        margin: 0 auto; 
+    }
+    .action-button-row { 
+        justify-content: center; 
+    }
+    .hero-main-title { 
+        font-size: 3.5rem; 
+    }
+    .map-layout { 
+        grid-template-columns: 1fr; 
+    }
+    .sticky-matrix {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+    .footer-columns {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-links-grid {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* --- TABLETS & MOBILE LANDSCAPE (max-width: 768px) --- */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .nav-center {
+        margin: 5px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .full-screen-terminal-section { 
+        height: 70vh; 
+    }
+    .terminal-body-display { 
+        font-size: 0.9rem; 
+        padding: 15px; 
+    }
+    .terminal-input-row { 
+        padding: 12px 15px; 
+    }
+    .map-layout {
+        gap: 20px;
+    }
+    .map-viewport {
+        height: 380px; 
+    }
+    .sticky-matrix {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+/* --- MOBILE PHONES (max-width: 640px) --- */
+@media (max-width: 640px) {
+    .apple-style-list-wrapper {
+        grid-template-columns: 1fr; 
+    }
+    .dock-status-tag {
+        display: none; 
+    }
+    .dock-container {
+        grid-template-columns: 1fr auto; 
+        gap: 15px;
+    }
+    .hero-main-title {
+        font-size: 2.8rem;
+    }
+    .hero-pre-title {
+        font-size: 1.5rem;
+    }
+    .brutalist-form {
+        padding: 25px 20px;
+    }
+}
+
+/* --- MICRO-MOBILE DECK (max-width: 450px) --- */
+@media (max-width: 450px) {
+    .sticky-matrix {
+        grid-template-columns: 1fr; 
+    }
+    .dock-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 12px;
+    }
+    .dock-controls {
+        flex-wrap: wrap;
+    }
+    .dock-meta {
+        padding-right: 0;
+    }
+    .action-button-row {
+        flex-direction: column;
+    }
+    .brutalist-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+/* ========================================================= */
+/* 📱 MOBILE RESPONSIVE RE-ENGINEERING (Under 950px)         */
+/* ========================================================= */
+@media (max-width: 950px) {
+    .desktop-nav {
+        display: none !important;
+    }
+    
+    .mobile-only {
+        display: inline-block !important;
+    }
+
+    .brutalist-dropdown {
+        position: relative;
+    }
+
+    .dropdown-trigger-btn {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 0.95rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        background: var(--cyber-blue, #1e90ff); 
+        color: #ffffff;
+        padding: 12px 20px;
+        border: var(--border-thickness) solid var(--border-color);
+        box-shadow: 4px 4px 0px var(--border-color);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .dropdown-menu-sheet {
+        display: none; 
+        position: absolute;
+        right: 0;
+        top: calc(100% + 12px);
+        background: #ffffff;
+        border: var(--border-thickness) solid var(--border-color);
+        min-width: 220px;
+        z-index: 100000;
+    }
+
+    .dropdown-menu-sheet.is-active {
+        display: block;
+        animation: brutalistPopIn 0.22s cubic-bezier(0.18, 1.25, 0.4, 1.1) forwards;
+    }
+
+    .dropdown-menu-sheet a {
+        display: block;
+        color: #111111;
+        text-decoration: none;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: 0.95rem;
+        padding: 14px 18px;
+        border-bottom: var(--border-thickness) solid var(--border-color);
+    }
+}
+
+/* --- ⚡ STOPS THE STACKING SEEN IN YOUR SCREENSHOT --- */
+@media (max-width: 600px) {
+    header.fixed-header {
+        padding: 8px 0 !important; /* Tighter padding to clear vertical space */
+    }
+
+    .header-container {
+        width: 94% !important;
+        flex-direction: row !important; /* Blocks any column-collapsing rules */
+        justify-content: space-between !important;
+    }
+
+    .header-actions {
+        gap: 8px !important; /* Pulls CTA button and Menu button closer together */
+    }
+
+    /* 1. Scale down Logo container */
+    .logo {
+        font-size: 1.05rem !important;
+        padding: 5px 9px !important;
+        box-shadow: 2px 2px 0px var(--border-color) !important;
+    }
+
+    /* 2. Scale down the new shortened CTA button */
+    .header-cta-btn {
+        padding: 7px 12px !important;
+        font-size: 0.8rem !important;
+        box-shadow: 2px 2px 0px var(--border-color) !important;
+    }
+
+    /* 3. Drop "MENU" string entirely and leave the icon button */
+    .dropdown-trigger-btn .menu-text {
+        display: none !important;
+    }
+
+    .dropdown-trigger-btn {
+        padding: 7px 10px !important;
+        font-size: 0.95rem !important;
+        box-shadow: 2px 2px 0px var(--border-color) !important;
+    }
+
+    .dropdown-menu-sheet {
+        top: calc(100% + 9px);
+        min-width: 170px;
+    }
+}
